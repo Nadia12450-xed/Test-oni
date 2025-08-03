@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)https://raptor-mvk.github.io/qa-html-css-homework/task1.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Задание №1</title>
+    <link rel="stylesheet" href="./Задание №1_files/styles1.css">
+<style>
+      @font-face {
+        font-family: "Inter";
+        src: url("chrome-extension://anpkfnccdmljhdegcaonjffhjhhcalaj/fonts/Inter.ttf") format("truetype");
+        font-style: normal;
+      }
+
+      read-to-me-sentence {
+        display: inline;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+
+      read-to-me-sentence.read-to-me-sentence-highlight {
+        background-color: #FFDBBE;
+        cursor: initial;
+
+        /* Расчет яркости по методу sRGB Luma */
+        --r: calc(255 * 0.2126);
+        --g: calc(219 * 0.7152);
+        --b: calc(190 * 0.0722);
+        --sum: calc(var(--r) + var(--g) + var(--b));
+        --perceived-lightness: calc(var(--sum) / 255);
+        
+        /* Динамический выбор цвета текста */
+        --threshold: 0.6;
+        color: hsl(0, 0%, calc((var(--perceived-lightness) - var(--threshold)) * -10000000%));
+      }
+
+      read-to-me-sentence.read-to-me-sentence-onhover {
+        background-color: #FFDBBE;
+        cursor: pointer;
+
+        /* Расчет яркости по методу sRGB Luma */
+        --r: calc(255 * 0.2126);
+        --g: calc(219 * 0.7152);
+        --b: calc(190 * 0.0722);
+        --sum: calc(var(--r) + var(--g) + var(--b));
+        --perceived-lightness: calc(var(--sum) / 255);
+        
+        /* Динамический выбор цвета текста */
+        --threshold: 0.6;
+        color: hsl(0, 0%, calc((var(--perceived-lightness) - var(--threshold)) * -10000000%));
+      }
+		</style><style>
+      body.shimeji-pinned iframe {
+        pointer-events: none;
+      }
+      body.shimeji-select-ie {
+        cursor: cell !important;
+      }
+      #shimeji-contextMenu::-webkit-scrollbar {
+        width: 6px;
+      }
+      #shimeji-contextMenu::-webkit-scrollbar-thumb {
+        background-color: rgba(30,30,30,0.6);
+        border-radius: 3px;
+      }
+      #shimeji-contextMenu::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+    </style><meta name="shimejiBrowserExtensionId" content="gohjpllcolmccldfdggmamodembldgpc" data-version="2.0.5"></head>
+<body>
+<a href="https://raptor-mvk.github.io/qa-html-css-homework/task_main.html">Вернуться к списку заданий</a>
+<h1>Это крупный заголовок</h1>
+<h2>Это менее крупный заголовок</h2>
+<h3>Это самый мелкий заголовок</h3>
+<ol>
+    <li>Это первый пункт списка</li>
+    <li>Это второй пункт списка</li>
+    <li>Это третий пункт списка</li>
+    <li>Это четвёртый пункт списка</li>
+<li>Это пятый пункт списка</li></ol>
+<b><p><i>Это полужирный текст</i></p>
+<p>Это текст записан полужирным курсивом</p></b>
+<p><i>Этот текст записан курсивом</i></p>
+
+
+<div id="shimeji-workArea" style="position: fixed; background: transparent; z-index: 2147483643; width: 100vw; height: 100vh; left: 0px; top: 0px; transform: translate(0px, 0px); pointer-events: none;"></div></body></html>
